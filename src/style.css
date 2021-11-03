@@ -7,13 +7,6 @@ body{
     color: hsl(0, 0%, 75%);
     overflow-x: hidden;
 }
-button{
-  background: none;
-  border: none;
-  display: block;
-  font-family: inherit;
-  cursor: pointer;
-}
 
 *{
     margin: 0;
@@ -27,7 +20,7 @@ button{
     padding-left: 10vw;
     padding-right: 10vw;
     background-color: white;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 10px;
 }
 .header-left{
@@ -35,30 +28,30 @@ button{
     justify-content: space-evenly;
     max-width: 420px;
     
-}.header-left button:first-of-type{
+}.header-left a:first-of-type{
     margin-left: 10px;
 }
-.header-left button {
+.header-left a {
     text-decoration: none;
     color: hsl(0, 0%, 75%);
     margin-right: 10px;
     transition: all 0.5s;
 }
-.header-left button:hover{
+.header-left a:hover{
     color: #000;
 
 }
-.header-right button {
+.header-right a {
     text-decoration: none;
     color: hsl(0, 0%, 75%);
     
     transition: all 0.5s;
 }
-.header-right button:hover{
+.header-right a:hover{
     color: #000;
 
 }
-.header-right button:first-of-type{
+.header-right a:first-of-type{
     margin-right: 10px;
 }
 .header-right{
@@ -76,8 +69,8 @@ button{
     text-decoration: none;
     background-color: hsl(180, 66%, 49%);
     color: white;
-    padding:8px 15px;
-    
+    padding:10px 15px;
+    margin-top: -10px;
     border-radius:50px ;
     transition: background-color 0.3s;
     
@@ -88,7 +81,7 @@ button{
     background-color: hsl(180, 66%, 70%);
 }
 .header-hidden{
-    display: cover;
+    display: none;
 }
 .hero{
     padding-left: 10vw;
@@ -156,10 +149,9 @@ h1,h2,h3{
     text-decoration: none;
     background-color: hsl(180, 66%, 49%);
     color: white;
-    
-    margin-right: 10px;
     padding:10px 15px;
-    font-family: inherit;
+    /* margin-top: 5px; */
+    /* margin-left: 30px; */
     display: inline-block;
     border-radius:10px ;
     border: none;
@@ -291,7 +283,7 @@ h1,h2,h3{
     cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-.header-left button {
+.header-left a {
     display: none;
 }
 .header-right{
@@ -359,7 +351,7 @@ h1{
     gap: 20px;
 }
 .cta{
-    background-image: url(./images/bg-boost-mobile.svg);
+    background-image: url(images/bg-boost-mobile.svg);
 }
 .first-grid, .second-grid, .third-grid{
    display: flex;
@@ -385,23 +377,23 @@ h1{
     display: flex;
     flex-direction: column;
 }
-.header-hidden div button {
+.header-hidden div a {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
     text-align: center;
 }
 .hidden{
-    display: block;
+    display: none;
 }
-.hidden-first button {
+.hidden-first a {
     margin-bottom: 10px;
 }
 .hidden-first{
     border-bottom:solid 1.5px hsl(257, 7%, 63%) ;
     width: 80%;
 }
-.hidden-second button{
+.hidden-second a{
     margin-bottom: 10px;
     
 }
