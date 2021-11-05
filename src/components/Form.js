@@ -2,10 +2,9 @@
 import React, { useState } from "react";
 
 export const Form = ({ urlText }) => {
-  let inputStyle = {
-    border: "red 10px ",
-  };
+ 
   const [text, setText] = useState("");
+  const [pressed, setPressed] = useState(true)
   function ValidateUrl(link) {
     var urlFormat =
       /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
@@ -20,21 +19,19 @@ export const Form = ({ urlText }) => {
     if (ValidateUrl(text)) {
       urlText(text);
     } else {
-      inputStyle = {
-        outline: "solid 1px hsl(0, 87%, 67%)",
-      };
-      alert("wrong url");
+      setPressed(false);
+      alert("Please input a URL");
     }
   };
 
   return (
     <div>
-      <div>
+      <div className = "form-wrapper">
         <form onSubmit={onSubmit} className="form">
           <div>
             <input
               onChange={(e) => setText(e.target.value)}
-              style={inputStyle}
+              style={pressed? {outline:"none"}:{outline:"1px solid hsl(0, 87%, 67%)"}}
               type="text"
               size="30"
               id="url"

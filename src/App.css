@@ -126,6 +126,10 @@ h1,h2,h3{
 .btn-2:hover{
     background-color: hsl(180, 66%, 70%);
 }
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
 .form{
     background: url(images/bg-shorten-desktop.svg);
     background-color: hsl(257, 27%, 26%);
@@ -276,7 +280,7 @@ h1,h2,h3{
     cursor: pointer;
 }
 .social-icons img{
-    margin-right: 5px;
+    margin-right: 10px;
 }
 .social-icons img:hover {
     color: hsl(180, 66%, 49%);
@@ -305,21 +309,31 @@ h1,h2,h3{
     display: flex;
     flex-direction: column-reverse;
 }
+.hero >:first-child{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+}
 h1{
     text-align: center;
 }
 .btn-2{
     display: block;
     text-align: center;
-    margin: 15px 90px;
+    margin: 15px 0;
     transition: background-color 0.3s;
 }
 .wrapper{
-    padding: 10px 5vw;
+    padding: 10px 0;
+}
+.form-wrapper{
+    width: 100%;
+    padding: 0;
 }
 .form{
     display: flex;
     flex-direction: column;
+    padding: 10px 2vw;
     align-items: center;
     background: url(images/bg-shorten-mobile.svg);
     background-color: hsl(257, 27%, 26%);
@@ -360,6 +374,10 @@ h1{
 }
 .cta{
     background-image: url(./images/bg-boost-mobile.svg);
+}
+.cta > :last-child{
+    display: flex;
+    flex-direction: column;
 }
 .first-grid, .second-grid, .third-grid{
    display: flex;
@@ -408,8 +426,9 @@ h1{
 }
 @media screen and (max-width:310px) {
     .btn-2{
-        width: 100%;
+       
         margin: 0;
+        
     }
     
 }

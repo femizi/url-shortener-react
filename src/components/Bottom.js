@@ -87,7 +87,7 @@ export const Bottom = () => {
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer"
         >Frontend Mentor</a
-      >. Coded by <a href="twitter.com/sonofpharoh">Your Name Here</a>.
+      >. Coded by <a href="twitter.com/sonofpharoh">Femi Efejuku</a>.
     </div>
         </div>
     )
