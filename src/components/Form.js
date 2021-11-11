@@ -1,8 +1,8 @@
 /* eslint-disable no-useless-escape */
 import React, { useState } from "react";
 
-export const Form = ({ urlText }) => {
- 
+export const Form = ({ urlText, spinner }) => {
+ let name = "Shorten It!"
   const [text, setText] = useState("");
   const [pressed, setPressed] = useState(true)
   function ValidateUrl(link) {
@@ -23,6 +23,11 @@ export const Form = ({ urlText }) => {
       alert("Please input a URL");
     }
   };
+  if(spinner === true){
+    name = "Please Wait"
+  }else {
+    name = "Shorten It"
+  }
 
   return (
     <div>
@@ -40,7 +45,7 @@ export const Form = ({ urlText }) => {
           </div>
           <div>
             <button type="submit" className="main-btn">
-              Shorten It!
+              {name}
             </button>
           </div>
         </form>
