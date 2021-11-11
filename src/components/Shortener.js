@@ -39,8 +39,8 @@ export const Shortener = () => {
     } else {
       const temp = JSON.stringify(state);
       const newTemp = JSON.stringify(tester)
-      localStorage.setItem("mainlinks", newTemp)
       console.log(newTemp)
+      localStorage.setItem("mainlinks", newTemp)
       localStorage.setItem("link1", temp);
 
       setStored(true);
@@ -68,7 +68,8 @@ export const Shortener = () => {
       <div className="wrapper">
         <Form urlText={(text) => setTerm(text)} spinner={spinner} />
         {isLoading ? <div className="loader" >Loading...</div> : <Answer url={url} copyLink={copyLink} />}
-       
+        {/* {tester.map((data,index)=> 
+        <p>Hello {data.result.original_link}</p>)} */}
       </div>
     </div>
   );
